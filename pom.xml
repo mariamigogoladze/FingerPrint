@@ -12,5 +12,13 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-    
+
+    <dependencies>
+        <dependency>
+                <groupId>org.bitbucket.johness</groupId>
+                <artifactId>java-cef</artifactId>
+                <version>49.87.win64.2</version>
+        </dependency>
+    </dependencies>
+
 </project>
