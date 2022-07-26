@@ -9,12 +9,8 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
     SavePng savePng = new SavePng();
-    File dir = new File("/home/mariami/Documents/untitled1/src/main/resources/pngs");
+    File dir = new File("src/main/resources/55");
     BufferedImage image = ImageIO.read(new File("/home/mariami/Downloads/1658496338833.png"));
     savePng.saveImg(dir, image);
-
-    Decryption decryption = new Decryption();
-   // decryption.dec(dir);
-    System.out.println("Hello world!");
   }
 }

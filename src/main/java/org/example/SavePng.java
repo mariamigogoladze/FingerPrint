@@ -1,9 +1,5 @@
 package org.example;
 
-
-import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
-
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
@@ -15,9 +11,8 @@ public class SavePng {
         System.out.println("Saving image to dir " + dir.getAbsolutePath());
 
         try {
-            ImageIO.write(img, "png", outputfile);
-            Decryption decryption = new Decryption();
-            decryption.dec(dir);
+            Encryption encryption = new Encryption();
+            encryption.enc(outputfile,img);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a78eda06-0476-4ad6-9d63-3888f5610725" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Decryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Decryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Encryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SavePng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SavePng.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/mariami/Documents/untitled1/src/main/resources/pngs",
+    "last_opened_file_path": "/home/mariami/Documents/untitled1/src/main/resources/55",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,10 +52,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/55" />
+      <recent name="$PROJECT_DIR$/src/main/resources/33" />
+      <recent name="$PROJECT_DIR$/src/main/resources/44" />
       <recent name="$PROJECT_DIR$/src/main/resources/pngs" />
       <recent name="$PROJECT_DIR$/src/main/resources/pngs/33/55" />
-      <recent name="$PROJECT_DIR$/src/main/resources/pngs/33/44" />
-      <recent name="$PROJECT_DIR$/src/main/resources/pngs/33" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/pngss" />
@@ -133,7 +131,8 @@
       <workItem from="1658478539642" duration="599000" />
       <workItem from="1658479513888" duration="1207000" />
       <workItem from="1658726915251" duration="5883000" />
-      <workItem from="1658733096844" duration="14391000" />
+      <workItem from="1658733096844" duration="15779000" />
+      <workItem from="1658814200650" duration="11208000" />
     </task>
     <servers />
   </component>

@@ -1,25 +1,20 @@
-//package org.example;
-//
-//import sun.misc.BASE64Encoder;
-//
-//import javax.imageio.ImageIO;
-//import java.awt.image.BufferedImage;
-//import java.io.*;
-//
-//public class Encryption {
-//  public void enc(File dir, BufferedImage img) throws FileNotFoundException, IOException {
-//    ByteArrayOutputStream bos = new ByteArrayOutputStream();
-//    String ret = null;
-//    File outputfile = new File(dir + File.separator + System.currentTimeMillis() + ".png");
-//
-//    try {
-//      byte[] bytes = bos.toByteArray();
-//      BASE64Encoder encoder = new BASE64Encoder();
-//      FileOutputStream.write(img, "png", outputfile);
-//      ret = encoder.encode(bytes);
-//      ret = ret.replace(System.lineSeparator(), "");
-//    } catch (IOException e) {
-//      throw new RuntimeException();
-//    }
-//  }
-//}
+package org.example;
+
+import java.awt.image.BufferedImage;
+import java.io.*;
+
+public class Encryption {
+  public void enc(File dir, BufferedImage img) throws FileNotFoundException, IOException {
+    byte[] probeImage = Utils.getBytesFromBufferedImage(img);
+    int key = 1;
+    int i = 0;
+    for (byte b : probeImage) {
+      probeImage[i] = (byte) (b ^ key);
+      i++;
+    }
+    try(FileOutputStream fos = new FileOutputStream(dir)){
+      fos.write(probeImage);
+      System.out.println("Encryption done");
+    }
+  }
+}

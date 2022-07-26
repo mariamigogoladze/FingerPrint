@@ -1,34 +1,49 @@
 package org.example;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class Decryption {
   public void dec(File dir) throws FileNotFoundException, IOException {
-    System.out.println("Note : Encryption Key act as Password to Decrypt the same Image,otherwise it will corrupt the Image.");
+    // Note : Encryption Key act as Password to Decrypt the same Image,otherwise it will corrupt the Image
 
     int key = 1;
 
-    for (File child : dir.listFiles()) {
+    String[] directories = dir.list(
+            new FilenameFilter() {
+              @Override
+              public boolean accept(File dir, String name) {
+                return new File(dir, name).isDirectory();
+              }
+            });
+    System.out.println(Arrays.toString(directories));
 
-      FileInputStream fis = new FileInputStream(child);
+    for (int i = 0; i < directories.length; ++i) {
+      File originalDir = new File(String.valueOf(dir));
+      dir = new File(dir + "/" +directories[i]);
 
-      byte data[] = new byte[fis.available()];
+      for (File child : dir.listFiles()) {
 
-      fis.read(data);
-      int i = 0;
+        FileInputStream fis = new FileInputStream(child);
 
-      for (byte b : data) {
-        data[i] = (byte) (b ^ key);
-        i++;
+        byte data[] = new byte[fis.available()];
+
+        fis.read(data);
+        int j = 0;
+
+        for (byte b : data) {
+          data[j] = (byte) (b ^ key);
+          j++;
+        }
+
+        FileOutputStream fos = new FileOutputStream(child);
+
+        fos.write(data);
+
+        fos.close();
+        fis.close();
       }
-
-      FileOutputStream fos = new FileOutputStream(child);
-
-      fos.write(data);
-
-      fos.close();
-      fis.close();
-      System.out.println("Encryption Done...");
+      dir = new File(String.valueOf(originalDir));
     }
   }
 }
